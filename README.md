@@ -1,4 +1,5 @@
 # Transmute.js, a library for modifying CSS transforms from JS
+Demo @ http://saltyJeff.github.io/Transmute
 ## Usage:
 ```
 var div = document.getElementById("move");
