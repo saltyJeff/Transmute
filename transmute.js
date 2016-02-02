@@ -19,10 +19,17 @@ transmute.prototype.apply = function () {
     this.style.transform = transformStr;
 };
 transmute.prototype.translate = function (x,y) {
+    this.translateX += x;
+    this.translateY += y;
+};
+transmute.prototype.setTranslation = function (x,y) {
     this.translateX = x;
     this.translateY = y;
 };
 transmute.prototype.rotate = function (r) {
+    this.rotation += r;
+};
+transmute.prototype.setRotation = function (r) {
     this.rotation = r;
 };
 transmute.prototype.getTranslationX = function () {
