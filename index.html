@@ -4,12 +4,14 @@
         X:<input type="number" id="x" value="0"/><br>
         Y:<input type="number" id="y" value="0" /><br>
         Rotation:<input type="number" id="rot" value="0"/><br>
-        <input type="button" value="Transmute!" onclick="change()"/><input type="button" value="Reset" onclick="reset()" />
+        <input type="button" value="Transmute!" onclick="change()"/><br>
+        <input type="button" value="Reset" onclick="reset()" /><br>
+        <p>Plug in the numbers you want and press "Transmute!", or press "Reset" to return to beginning</p>
     </div>
     <script src="transmute.js"></script>
     <script>
         var div = document.getElementById("move");
-        $Transmute(div);
+        $Transmute(div); //initiate Transmute
         
         function change () {
             var x = parseInt(document.getElementById("x").value);
