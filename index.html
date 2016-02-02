@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <body>
-  <div id="move" style="font-size: 30pt; background-color: blue; color: white;">TRANSMUTE.JS DEMO</div>
-  <script src="transmute.js"></script>
+    <div id="move" style="font-size: 30pt; background-color: blue; color: white; width: 600px; height: 600px;">TRANSMUTE.JS DEMO<br>
+        X:<input type="number" id="x" value="0"/><br>
+        Y:<input type="number" id="y" value="0" /><br>
+        Rotation:<input type="number" id="rot" value="0"/><br>
+        <input type="button" value="Transmute!" onclick="change()"/><input type="button" value="Reset" onclick="reset()" />
+    </div>
+    <script src="transmute.js"></script>
+    <script>
+        var div = document.getElementById("move");
+        $Transmute(div);
+        
+        function change () {
+            var x = parseInt(document.getElementById("x").value);
+            var y = parseInt(document.getElementById("y").value);
+            var r = parseInt(document.getElementById("rot").value);
+            div.transmute.translate(x,y);
+            div.transmute.rotate(r);
+            div.transmute.apply();
+        }
+        function reset () {
+            div.transmute.setTranslation(0,0);
+            div.transmute.setRotation(0);
+            div.transmute.apply();
+        }
+    </script>
 </body>
 </html>
