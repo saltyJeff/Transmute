@@ -11,12 +11,19 @@ function transmute(obj) {
     this.translateY = 0;
     this.rotation = 0;
     this.rotationUnit = "deg";
+    this.scaleX = 0;
+    this.scaleY = 0;
 }
 transmute.prototype.apply = function () {
     var transformStr = "";
     transformStr += "translate("+this.translateX+"px,"+this.translateY+"px)";
     transformStr += " rotate("+this.rotation+this.rotationUnit+")";
+    transformStr += " scale("+scaleX+","+scaleY+") ";
     this.style.transform = transformStr;
+};
+transmute.prototype.scale = function (x,y) {
+    this.scaleX = x;
+    this.scaleY = y;
 };
 transmute.prototype.translate = function (x,y) {
     this.translateX += x;
@@ -43,4 +50,10 @@ transmute.prototype.getRotation = function () {
 };
 transmute.prototype.getRotationUnit = function () {
     return this.rotationUnit;
+};
+transmute.prototype.getScaleX = function () {
+    return this.scaleX;
+};
+transmute.prototype.getScaleY = function () {
+    return this.scaleY;
 };
