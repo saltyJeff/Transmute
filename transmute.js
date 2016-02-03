@@ -18,7 +18,7 @@ transmute.prototype.apply = function () {
     var transformStr = "";
     transformStr += "translate("+this.translateX+"px,"+this.translateY+"px)";
     transformStr += " rotate("+this.rotation+this.rotationUnit+")";
-    transformStr += " scale("+scaleX+","+scaleY+") ";
+    transformStr += " scale("+this.scaleX+","+this.scaleY+") ";
     this.style.transform = transformStr;
 };
 transmute.prototype.scale = function (x,y) {
