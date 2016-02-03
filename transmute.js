@@ -11,8 +11,8 @@ function transmute(obj) {
     this.translateY = 0;
     this.rotation = 0;
     this.rotationUnit = "deg";
-    this.scaleX = 0;
-    this.scaleY = 0;
+    this.scaleX = 1;
+    this.scaleY = 1;
 }
 transmute.prototype.apply = function () {
     var transformStr = "";
